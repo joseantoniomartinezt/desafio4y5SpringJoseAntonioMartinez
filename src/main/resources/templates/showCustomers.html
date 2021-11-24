@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Everis Customers</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h1>¡Customers!</h1>
+
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Descripción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<th:block th:each="customer : ${customerList}">
+				<tr>
+					<td scope="row" th:text="${customer.id}"></td>
+					<td scope="row" th:text="${customer.name}"></td>
+					<td scope="row" th:text="${customer.surName1}"></td>
+					<td scope="row" th:text="${customer.surName2}"></td>
+					<td scope="row" th:text="${customer.identityDocNumber}"></td>
+				</tr>
+			</th:block>
+		</tbody>
+	</table>
+
+</body>
+</html>

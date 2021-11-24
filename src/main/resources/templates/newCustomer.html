@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SISTEMA EVERIS</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">New Customer.</div>
+		  <div class="card-body">
+				<form th:action="@{./addCustomer}" th:object="${newCustomer}" method="POST">
+					<div class="form-group">
+						  <label for="inpName">Name</label>
+						  <input type="text" required="required" class="form-control" id="inpTname" name="name" >
+					</div>
+					<div class="form-group">
+						  <label for="inpSurName1">SurName1</label>
+						  <input required="required" type="text" class="form-control" id="inpTsurName1" name="surName1">
+					</div>
+					<div class="form-group">
+						  <label for="inpSurName2">SurName2</label>
+						  <input required="required" type="text" class="form-control" id="inpTsurName2" name="surName2">
+					</div>
+					<div class="form-group">
+						  <label for="inpidentityDocNumber">identity Doctor Number</label>
+						  <input required="required" type="text" class="form-control" id="inpTidentityDocNumber" name="identityDocNumber">
+					</div>
+					<button type="submit" name="btnAddCustomer" class="btn btn-success">Add</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>
